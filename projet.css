@@ -1,0 +1,312 @@
+body {
+  background-color: #262626;
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+
+/*Pied de page*/
+footer {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+
+  color: white;
+  font-size: 13px;
+}
+
+/*Boutons*/
+button {
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  margin: 10px 0px 0px 10px;
+  border: none;
+  transition: all 2s;
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+}
+/*Après clique sur le bouton*/
+button:focus {
+  outline: none; /* Ne pas afficher le contour bleu initial */
+}
+
+
+
+
+
+/*------------TITRE------------*/
+/*-----------------------------*/
+
+#titre {
+  position: relative;
+  height: 50px;
+  width: 100%;
+
+  text-transform: uppercase;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0px;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
+
+  background: linear-gradient(49deg, #3a50b2, #c6269b);
+  background-size: 200% 200%;
+  color: white;
+
+
+  -webkit-animation: titre-gradient 15s ease infinite; /*nom, durée, timing, itérations*/
+  -moz-animation: titre-gradient 15s ease infinite;
+  -o-animation: titre-gradient 15s ease infinite;
+}
+
+/*------------AFFICHAGE------------*/
+/*---------------------------------*/
+
+/*Container général du canvas qui permet de le centrer*/
+#ecran {
+  width: 100%;
+  height: 650px;
+
+  display: flex;
+  justify-content: center;
+}
+
+/*Container du canvas*/
+#zone {
+  height: 600px;
+  width: 800px;
+  position: fixed;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/*Canvas*/
+#affichage {
+  position: fixed;
+  display: inline-block;
+  text-align: center;
+
+  margin-top: 20px;
+
+  border: 1px solid #636363;
+
+  z-index: -1;
+}
+
+/*Texte du menu dropdown*/
+#controles_aff {
+  width: 210px;
+
+  z-index: 0;
+  margin: 30px 0 0 10px;
+
+  font-weight: 100;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+/*Flèche animée à côté du menu dropdown*/
+#arrow {
+  position: relative;
+  top: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+/*Container des contrôles*/
+#controles_cont {
+  width: 400px;
+  display: block;
+}
+
+/*Titre "Particules"*/
+#particules {
+  margin: 10px 0px 0px 0px;
+  padding-left: 3px;
+
+  border: 0px solid #808080;
+  border-left-width: 10px;
+
+  color: white;
+  font-weight: 100;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*Container du formulaire de contrôles*/
+#formulaire {
+  color: white;
+  font-size: 13px;
+
+  margin-top: 0px;
+  padding: 15px 8px 15px 5px;
+
+  background-color: rgba(96, 96, 96, 0.6);
+}
+
+/*Texte d'instructions pour ajouter une particule*/
+#explication {
+  margin: 0px 0px 15px 0px;
+}
+
+/*Range qui définit la masse de la particule ajoutée*/
+#masse {
+  position: relative;
+  display: inline-block;
+  margin: 0px 0px 20px 0px;
+  left: 20%;
+}
+
+/*Valeur à côté du range de la masse*/
+#valeur_masse {
+  margin: 0 0 0 90px;
+}
+
+/*Color picker de la particule ajoutée*/
+#couleur {
+  position: relative;
+  display: inline-block;
+  margin: 0px 0px 20px 0px;
+  left: 20%;
+}
+
+/*Container du bouton toggle pour fixer ou non la particule ajoutée*/
+#slider {
+  position: relative;
+  width: 55px;
+  height: 26px;
+
+  left: 28px;
+
+  display: inline-block;
+  background-color: #b3b3b3;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: .4s;
+}
+
+/*Rond du bouton toggle*/
+#check {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 4px 0px 4px 4px;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  background-color: white;
+
+  transition: .4s;
+}
+
+/*Container des boutons*/
+#boutons {
+  display: flex;
+  flex-direction: row;
+
+  width: 0;
+}
+
+/*Bouton démarrer*/
+#demarrer {
+  color: #FFF;
+  border: 2px solid linear-gradient(-45deg, #f35700, #e7c139);;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #D80286;
+  -webkit-transition: ease-out 1s;
+  -moz-transition: ease-out 1s;
+  transition: ease-out 1s;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #f35700, #e7c139);}
+/*Lorsqu'on passe sa souris sur le bouton démarrer*/
+#demarrer:hover {
+  box-shadow: inset 0 100px 0 0 #D80286;
+}
+
+/*Bouton stop*/
+#stop {
+  color: #FFF;
+  border: 2px solid linear-gradient(-45deg, #f35700, #e7c139);;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #D80286;
+  -webkit-transition: ease-out 1s;
+  -moz-transition: ease-out 1s;
+  transition: ease-out 1s;
+  background: linear-gradient(-45deg, #f35700, #e7c139);
+  border-radius: 10px;}
+/*Lorsqu'on passe sa souris sur le bouton stop*/
+#stop:hover {
+  box-shadow: inset 0 100px 0 0 #D80286;
+}
+
+/*Bouton vitesse*/
+#vitesse {
+  text-transform: none;
+  color: #FFF;
+  border: 2px solid linear-gradient(-45deg, #f35700, #e7c139);;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #D80286;
+  -webkit-transition: ease-out 1s;
+  -moz-transition: ease-out 1s;
+  transition: ease-out 1s;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #f35700, #e7c139);}
+/*Lorsqu'on passe sa souris sur le bouton vitesse*/
+#vitesse:hover {
+  box-shadow: inset 0 100px 0 0 #D80286;
+}
+
+
+
+
+
+/*Animation de la couleur dernière le titre principal*/
+/*Snippet trouvé sur https://www.gradient-animator.com/*/ 
+@-webkit-keyframes titre-gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes titre-gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes titre-gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

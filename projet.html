@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mécanique céleste</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0"/>
+	<meta name="author" content="ZARE Alireza, GUIDIKOV Christian">
+	<link rel="stylesheet" type="text/css" href="./projet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+	<h1 id="titre">Mécanique céleste</h1>
+
+
+
+<div id="ecran">
+	<div id="zone">
+		<canvas id="affichage" width="800" height="600"></canvas>
+
+		<h3 id="controles_aff"><i class="material-icons" id="arrow">expand_less</i><span id="status">Masquer les contrôles</span></h3>
+
+		<div id="controles_cont">
+			<h2 id="particules">Particules</h2>
+			<div id="formulaire">
+				<div id="explication"><p>Pour ajouter des particules, double-cliquer dans le canvas. La particule aura les propriétés définies ci-dessous.</p></div>
+				<div id="controles">
+					<div>
+						<label for="masse">Masse:</label>
+						<input type="range" name="masse" id="masse" min="1" max="500" value="250" step="1">
+						<output id="valeur_masse"></output>
+					</div>
+					<label for="couleur">Couleur:</label>
+					<input type="color" id="couleur" value="#ffffff">
+					<div>
+						<label id="switch">Fixer la particule:</label>
+						<span id="slider">
+							<span id="check"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="boutons">
+			<button type="button" id="demarrer">Démarrer</button>
+			<button type="button" id="stop">Stop</button>
+			<button type="button" id="vitesse">x1</button>
+		</div>
+	</div>
+</div>
+
+
+
+	<footer>
+		<p>Programmation Web 1 - 2020/21</p>
+	</footer>	
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="projet.js"></script>
+
+</body>
+</html>
